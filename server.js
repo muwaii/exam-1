@@ -2,19 +2,25 @@ const express = require('express');
 const randomstring = require('randomstring');
 const mongodb = require('mongodb');
 
+const ATLAS_URI = "mongodb+srv://order01:cdefgab123@cluster0.xgaq48i.mongodb.net/?retryWrites=true&w=majority"
 const app = express();
 
 app.use(express.text({type: '*/*'})) // chage payload that was sent to string
 app.use(express.static(__dirname));
 
-// Connect database
 let database;
-const mydb = 'mongodb://localhost:27017/';
-(async () => {
-    const mongoClient = mongodb.MongoClient;
-    const dbConnection = await mongoClient.connect(mydb);
-    database = dbConnection.db('exam-one');
-})();
+async function connect() {
+    try {
+        const mongoClient = mongodb.MongoClient;
+        const dbConnection = await mongoClient.connect(ATLAS_URI);
+        database = dbConnection.db('test01');
+        console.log('My MongoDB connected TT');
+    } catch(error) {
+        console.error(error);
+    }
+}
+connect();
+
 
 // Go to full url which is mapped with genShort (the link we've made) 
 app.get('/:message', async (req, res) => {
