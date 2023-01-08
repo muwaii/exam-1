@@ -1,9 +1,11 @@
 ### Fullstack
+#### 1.System Design
 ระบบย่อ url
+หลักการทำงาน 
+input(url) -> compute -> output(short url)
 ![alt text](Untitled-2023-01-09-0119.png)
 Demo: https://shortermy.onrender.com/
 
-#### 1.System Design
 รายละเอียดเทคโนโลยีที่ใช้ พร้อมเหตุผลที่เลือกใช้
 - database
 => MongoDB เพราะต้องการร่วมทีมกับมายออเดอร์ จึงเลือกศึกษาฐานข้อมูลตามลักษณะงาน
