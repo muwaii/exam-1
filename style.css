@@ -5,3 +5,39 @@
 body {
   margin: 0;
 }
+
+h1 {
+  text-align: center;
+}
+
+#input-container {
+  text-align: center;
+}
+
+#create-btn {
+  color: white;
+  border-color: whitesmoke;
+  background-color: #008CBA;
+}
+
+#url {
+  width: 400px;
+}
+
+#short-container {
+  text-align: center;
+}
+
+#short {
+  text-align: center;
+}
+
+#short-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+#copy-btn {
+  margin: auto 5px;
+}
