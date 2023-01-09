@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -8,6 +9,8 @@ body {
 
 h1 {
   text-align: center;
+  margin-top: 70px;
+  color: #006c90;
 }
 
 #input-container {
@@ -16,12 +19,16 @@ h1 {
 
 #create-btn {
   color: white;
-  border-color: whitesmoke;
+  border-color: #008CBA;
   background-color: #008CBA;
+  height: 30px;
+  width: 70px;
 }
 
 #url {
   width: 400px;
+  height: 30px;
+  margin-right: -7px;
 }
 
 #short-container {
@@ -35,9 +42,9 @@ h1 {
 #short-container {
   display: flex;
   justify-content: center;
-  margin: 20px auto;
+  margin: 50px auto;
 }
 
 #copy-btn {
-  margin: auto 5px;
+  margin: auto 10px;
 }
