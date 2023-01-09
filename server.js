@@ -21,7 +21,7 @@ async function connect() {
 }
 connect();
 
-app.post('/', async (req, res) => {
+app.post('/l', async (req, res) => {
     const url = req.body;
     const genShort = randomstring.generate(6);
     const obj = { url, genShort};
@@ -30,7 +30,7 @@ app.post('/', async (req, res) => {
 });
 
 // Go to full url which is mapped with genShort (the link we've made) 
-app.get('/:message', async (req, res) => {
+app.get('/l/:message', async (req, res) => {
     const genShort = req.params.message;
     const result = await database.collection('urls').findOne({ genShort });
     res.redirect(result.url);

@@ -29,7 +29,7 @@ function createShortUrl() {
     // To send a request to a server, you can use the open() 
     // and send() methods of the XMLHttpRequest object:
     // open(method, url, async, user, psw)
-    xhr.open('POST', '/');
+    xhr.open('POST', '/l');
     
     // Adds a label/value pair to the header to be sent
     xhr.setRequestHeader('Content-Type', 'text/plain');
@@ -44,7 +44,7 @@ function createShortUrl() {
         console.log('The data is', typeof data, data);
 
         const shortElement = document.getElementById('short');
-        const shortUrl = window.location.origin + '/' + data.genShort;  // Create a new short url
+        const shortUrl = window.location.origin + '/l/' + data.genShort;  // Create a new short url
         shortElement.innerHTML = '<a id="short-url" href="' + shortUrl + '">' + shortUrl + '</a>';
       }
     };
